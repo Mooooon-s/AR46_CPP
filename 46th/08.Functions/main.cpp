@@ -1,4 +1,6 @@
 #include <iostream>
+#include<stdio.h>
+#include<stdarg.h>
 
 using namespace std;
 
@@ -12,17 +14,29 @@ using namespace std;
 
 //템플릿 함수
 //자료형을 받아올때 자동으로 그에 맞는 타입으로 지정해줌
+//정적할당 방식 컴파일러가 그 형에 맞는 코드를 미리 작성 후 컴파일
+//구현부 선언부 사용 불가능 하다.
+//번역하는데 시간이 걸려서 빌드가 느려짐
 template <typename T>
 T Add(T a, T b) {
 	return a + b;
 }
 
+//타입의 이름을 설정
+typedef int MYINT;
+
 //가변인자
 //인자의 갯수가 변할수 있음
 void print(int num, ...) {
 	va_list VaList;
-	__va_start(&VaList, num);
+	__crt_va_start(VaList, num);
+	cout << sizeof(VaList);
+	for (int i = 0;i < sizeof(VaList);i++) {
+		int output = va_arg(VaList, int);
+		std::cout << output;
+	}
 
+	va_end(VaList);
 	//포인터 공부후 다시
 }
 
@@ -34,7 +48,9 @@ int main() {
 	int result = Add(1, 2);
 	float fresult = Add(1.0f, 1.2f);
 
-	cout << result<< " " << fresult;
+	cout << result<< " " << fresult<<"\n";
+
+	print(1, 2, 3, 4, 5, 7, 9, 6, 3);
 
 	return 0;
 }

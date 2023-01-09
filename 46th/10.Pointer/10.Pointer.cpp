@@ -9,6 +9,14 @@ void swap(int a, int b) {
     b = tmp;
 }
 
+void print(char* str) {
+    //주소값을 넘겨주면 메모리를 적게 사용
+    //*str =>8바이트
+    //strA[256]-> 256바이트
+
+    std::cout << str;
+}
+
 int main()
 {
     int c = 9;
@@ -43,5 +51,5 @@ int main()
     std::cout << p1;  //주소가 들어가있음
     std::cout << *p1;//주소를 역참조해서 값을 받아옴
 
-    std::cout << "Hello World!\n";
+    char strA[256]= "Hello World!\n";
 }
