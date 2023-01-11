@@ -113,6 +113,15 @@ int main()
 
     std::cout << (*(*pArr))<<std::endl;
 
+    for (int(&i)[2] : arr) {
+        
+    }
 
+    for (int* a : arr) {
 
+    }
+    
+    //그냥 2중 for문을 이용하는 것이 보기 편함
+
+    return 0;
 }
