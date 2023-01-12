@@ -7,10 +7,29 @@
 // 트리랑 잘 어울린다.(dfs)
 // 함수는 스택 메모리에 저장된다.
 // stack overflow
-
 using namespace std;
 
 
+void run(int level) {
+	if (level == 3) {
+		return;
+		//나를 호출한 함수로 복귀
+	}
+	cout << "in"<<level<<"\n";
+	//DFS 깊이우선 탐색
+	//run(level + 1);
+	//run(level + 1);
+	
+	//i는 가지의 갯수
+	for (int i = 0; i < 4; i++) {
+		run(level + 1);
+	}
+
+	cout << "out"<<level<<"\n";
+	
+}
+
 int main() {
+	run(0);
 	return 0;
 }
