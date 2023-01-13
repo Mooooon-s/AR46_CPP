@@ -6,6 +6,8 @@
 
 int main()
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    //_crtBreakAlloc( 누수 위치 입력 );
 
     //데이터의 추가 삽입,삭제에있어서 빠르게 처리 가능
     NODE n1;
@@ -28,4 +30,11 @@ int main()
     std::cout << n1._data << "\n";
     std::cout << n1._next->_data << "\n";
 
+    AddNode(2);
+    AddNode(3);
+    AddNode(5);
+
+
+
 }
+
