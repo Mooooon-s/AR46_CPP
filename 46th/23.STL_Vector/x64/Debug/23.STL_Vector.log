@@ -1,0 +1,10 @@
+﻿  23.STL_Vector.cpp
+C:\Users\assor\OneDrive\문서\GitHub\AR46_CPP\46th\23.STL_Vector\mVector.h(12,1): warning C4267: '초기화 중': 'size_t'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              T=int
+          ]
+C:\Users\assor\OneDrive\문서\GitHub\AR46_CPP\46th\23.STL_Vector\mVector.h(12,1): message : 클래스 템플릿 멤버 함수 'm::Vector<int>::Vector(size_t)'을(를) 컴파일하는 중입니다.
+C:\Users\assor\OneDrive\문서\GitHub\AR46_CPP\46th\23.STL_Vector\23.STL_Vector.cpp(76,20): message : 컴파일되는 함수 템플릿 인스턴스화 'm::Vector<int>::Vector(size_t)'에 대한 참조를 확인하세요.
+C:\Users\assor\OneDrive\문서\GitHub\AR46_CPP\46th\23.STL_Vector\23.STL_Vector.cpp(76,20): message : 컴파일되는 클래스 템플릿 인스턴스화 'm::Vector<int>'에 대한 참조를 확인하세요.
+  23.STL_Vector.vcxproj -> C:\Users\assor\OneDrive\문서\GitHub\AR46_CPP\46th\x64\Debug\23.STL_Vector.exe
